@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gok8s-teste-svc
+  labels:
+    version: v1
+    app: gok8s-teste
+spec:
+  selector:
+    app: gok8s-teste
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 3001
+    targetPort: 3001
